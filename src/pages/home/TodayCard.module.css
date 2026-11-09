@@ -1,0 +1,80 @@
+/* Frosted-glass card. It sits on the spheres in Hero's .stage. */
+.today {
+  position: relative;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
+  backdrop-filter: blur(26px) saturate(160%);
+  border: 1px solid var(--glass-line);
+  color: var(--ink);
+  padding: 28px;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  gap: 16px;
+}
+
+.today-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.today-head b {
+  font-family: var(--display);
+  font-size: var(--fs-sub);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 600 var(--fs-caption) var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.live::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.today ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.today li {
+  padding-block: 12px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 2px;
+}
+
+.today li b {
+  font-weight: 600;
+  font-size: var(--fs-body);
+}
+
+.today li span {
+  font-size: var(--fs-body);
+  color: var(--muted);
+}
+
+.today .hrs {
+  font: 600 var(--fs-body) var(--body);
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+}
+
+.today .today-all {
+  color: var(--accent);
+  justify-self: start;
+}

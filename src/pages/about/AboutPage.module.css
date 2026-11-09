@@ -1,0 +1,97 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-grid .prose {
+  display: grid;
+  gap: 16px;
+  font-size: var(--fs-body);
+  max-width: 62ch;
+}
+
+.about-grid .prose p {
+  color: var(--muted);
+}
+
+.prose .touch {
+  margin-top: 16px;
+}
+
+.fact {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 16px;
+}
+
+.fact dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 12px 18px;
+  margin: 0;
+  font-size: var(--fs-body);
+}
+
+.fact dt {
+  color: var(--muted);
+  font: 600 var(--fs-caption) var(--body);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.fact dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 820px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FAQ: a ruled list; + turns into − when an answer is open. */
+.faq {
+  border-top: 1px solid var(--line);
+}
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--fs-body);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  font: 400 var(--fs-sub) / 1 var(--body);
+  color: var(--muted);
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
+
+.faq details p {
+  margin-top: 10px;
+  color: var(--muted);
+  max-width: 70ch;
+}

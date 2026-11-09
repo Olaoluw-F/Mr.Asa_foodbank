@@ -1,0 +1,121 @@
+/* Design tokens: colors, fonts, shadows. Dark mode follows the OS setting;
+   data-theme="light" or "dark" on <html> forces one.
+   Corners are square on purpose: don't add border-radius to buttons, fields, or cards. */
+:root {
+  --bg: #f9f9fb;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --ink: #1e293b;
+  --muted: #5a6578;
+  --line: #e2e8f0;
+  --line-strong: #cbd5e1;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: #eff4ff;
+  --accent-line: #bfd3fe;
+  --warn: #92400e;
+  --warn-soft: #fef3c7;
+  --danger: #b91c1c;
+  --danger-soft: #fef2f2;
+  --btn: #2563eb;
+  --btn-hover: #1d4ed8;
+  --btn-fg: #ffffff;
+  --focus: #2563eb;
+  --deep: #0f172a;
+  --deep-fg: #f8fafc;
+  --deep-muted: #cbd5e1;
+  --deep-accent: #93c5fd;
+  --foot: #0f172a;
+  --foot-fg: #e2e8f0;
+  --foot-muted: #94a3b8;
+  --foot-line: #1e293b;
+  --glass: rgba(255, 255, 255, 0.6);
+  --glass-line: rgba(255, 255, 255, 0.9);
+  --wash-1: rgba(37, 99, 235, 0.11);
+  --wash-2: rgba(99, 102, 241, 0.08);
+  /* Universal Sans Display is a licensed font (Family Type). It shows only
+     where it's installed, or once licensed files are added with @font-face.
+     Until then, browsers use Geist, the next font in the list. */
+  --display: "Universal Sans Display", "Geist", system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --body: "Universal Sans Display", "Geist", system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+
+  /* Type scale (Tesla-style): three sizes, plus 12px for tags and fine print. */
+  --fs-hero: 40px; /* hero and main headlines */
+  --fs-sub: 22px; /* promo titles and sub-headlines */
+  --fs-body: 14px; /* body text, UI, and navigation */
+  --fs-caption: 12px; /* tags, small uppercase labels, fine print */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.04),
+    0 6px 16px -4px rgba(15, 23, 42, 0.06),
+    0 18px 40px -16px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 2px 6px rgba(15, 23, 42, 0.04),
+    0 30px 70px -24px rgba(30, 41, 59, 0.32);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0b1120;
+    --surface: #111a2e;
+    --surface-2: #172238;
+    --ink: #e2e8f0;
+    --muted: #94a3b8;
+    --line: #1f2a40;
+    --line-strong: #2e3b55;
+    --accent: #60a5fa;
+    --accent-strong: #93c5fd;
+    --accent-soft: #132344;
+    --accent-line: #1e3a6e;
+    --warn: #fcd34d;
+    --warn-soft: #2b2312;
+    --danger: #fca5a5;
+    --danger-soft: #2a1518;
+    --btn: #2563eb;
+    --btn-hover: #3b82f6;
+    --focus: #60a5fa;
+    --deep: #0f1a33;
+    --foot: #070b14;
+    --foot-line: #1a2335;
+    --glass: rgba(17, 26, 46, 0.55);
+    --glass-line: rgba(148, 163, 184, 0.18);
+    --wash-1: rgba(37, 99, 235, 0.22);
+    --wash-2: rgba(99, 102, 241, 0.14);
+    --shadow-sm: none;
+    --shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 30px 70px -24px rgba(0, 0, 0, 0.75);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b1120;
+  --surface: #111a2e;
+  --surface-2: #172238;
+  --ink: #e2e8f0;
+  --muted: #94a3b8;
+  --line: #1f2a40;
+  --line-strong: #2e3b55;
+  --accent: #60a5fa;
+  --accent-strong: #93c5fd;
+  --accent-soft: #132344;
+  --accent-line: #1e3a6e;
+  --warn: #fcd34d;
+  --warn-soft: #2b2312;
+  --danger: #fca5a5;
+  --danger-soft: #2a1518;
+  --btn: #2563eb;
+  --btn-hover: #3b82f6;
+  --focus: #60a5fa;
+  --deep: #0f1a33;
+  --foot: #070b14;
+  --foot-line: #1a2335;
+  --glass: rgba(17, 26, 46, 0.55);
+  --glass-line: rgba(148, 163, 184, 0.18);
+  --wash-1: rgba(37, 99, 235, 0.22);
+  --wash-2: rgba(99, 102, 241, 0.14);
+  --shadow-sm: none;
+  --shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 30px 70px -24px rgba(0, 0, 0, 0.75);
+}

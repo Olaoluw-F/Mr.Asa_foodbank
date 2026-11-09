@@ -1,0 +1,78 @@
+.mission {
+  margin: 0;
+  padding: 12px 14px;
+  border-left: 2px solid var(--accent);
+  background: var(--accent-soft);
+  font-size: var(--fs-body);
+  font-style: italic;
+  color: var(--ink);
+}
+
+.mission b,
+.meets b {
+  display: block;
+  font: 600 var(--fs-caption) var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.meets {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: var(--fs-body);
+  background: var(--surface-2);
+  padding: 10px 12px;
+}
+
+.meets svg {
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.tbd {
+  color: var(--muted);
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.soc {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  transition: border-color 0.15s;
+}
+
+.soc svg {
+  width: 16px;
+  height: 16px;
+}
+
+.soc:hover {
+  border-color: var(--accent);
+}
+
+.soc.ig svg {
+  color: #c13584;
+}
+
+.soc.gm svg {
+  color: #00aff0;
+}
+
+.soc.tl svg {
+  color: var(--accent);
+}

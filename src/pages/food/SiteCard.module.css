@@ -1,0 +1,5 @@
+/* The day picked in the Day filter stands out in the hours list. */
+.site .day-on {
+  color: var(--accent);
+  font-weight: 600;
+}

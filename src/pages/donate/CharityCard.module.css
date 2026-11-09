@@ -1,0 +1,48 @@
+.af .cty {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.trust {
+  font-size: var(--fs-body);
+  background: var(--surface-2);
+  border-left: 2px solid var(--accent);
+  padding: 12px 14px;
+}
+
+.trust b {
+  display: block;
+  font: 600 var(--fs-caption) var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.trust ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.keep {
+  font-size: var(--fs-body);
+}
+
+.keep b {
+  color: var(--ink);
+}
+
+.af.wide {
+  grid-column: 1/-1;
+  background: linear-gradient(135deg, var(--surface) 30%, var(--accent-soft));
+  border-color: var(--accent-line);
+}
+
+.af.wide .trust {
+  background: var(--surface);
+}
+
+.af .cta {
+  margin-top: auto;
+  align-self: flex-start;
+}

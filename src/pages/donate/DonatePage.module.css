@@ -1,0 +1,111 @@
+.give {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.give h3 {
+  font-size: var(--fs-sub);
+}
+
+.need-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: var(--fs-body);
+  display: grid;
+  gap: 2px;
+}
+
+.crisis-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.cstat {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 28px;
+  background: var(--surface);
+}
+
+.cstat b {
+  display: block;
+  font-family: var(--display);
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.cstat span {
+  color: var(--muted);
+  font-size: var(--fs-body);
+}
+
+.src {
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.checks-head {
+  margin-top: 8px;
+}
+
+.checks-head h3 {
+  font-size: var(--fs-sub);
+}
+
+.checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.checks li {
+  padding: 16px 18px 16px 46px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  position: relative;
+  font-size: var(--fs-body);
+}
+
+.checks li::before {
+  content: "✓";
+  position: absolute;
+  left: 18px;
+  top: 15px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.scam {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--danger);
+  background: var(--danger-soft);
+  display: grid;
+  gap: 12px;
+}
+
+.scam ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+@media (max-width: 700px) {
+  .crisis-stats,
+  .checks {
+    grid-template-columns: 1fr;
+  }
+}

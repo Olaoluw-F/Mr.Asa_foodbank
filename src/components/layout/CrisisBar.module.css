@@ -1,0 +1,19 @@
+.crisis-bar {
+  background: var(--btn);
+  color: var(--btn-fg);
+}
+
+.crisis-bar .inner {
+  padding-block: 16px;
+  display: flex;
+  gap: 8px 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.crisis-bar b {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--fs-body);
+  letter-spacing: -0.01em;
+}

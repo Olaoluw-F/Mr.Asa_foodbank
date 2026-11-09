@@ -1,0 +1,49 @@
+/* Band: full-width stripe on Home. Section: block on the other pages.
+   Only paragraphs after the heading get the muted intro style, so an
+   Eyebrow above the heading keeps its own look. */
+.band {
+  padding-block: clamp(64px, 9vw, 112px);
+}
+
+.band.alt {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.band .head {
+  display: grid;
+  gap: 12px;
+  max-width: 62ch;
+  margin-bottom: 40px;
+}
+
+.band .head h2 ~ p {
+  color: var(--muted);
+  font-size: var(--fs-body);
+}
+
+.head.center {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+.section {
+  padding-block: 56px;
+  display: grid;
+  gap: 24px;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+.section .head {
+  display: grid;
+  gap: 10px;
+  max-width: 64ch;
+}
+
+.section .head h2 ~ p {
+  color: var(--muted);
+}

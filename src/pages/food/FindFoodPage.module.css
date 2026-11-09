@@ -1,0 +1,17 @@
+.center-btn {
+  justify-self: center;
+}
+
+/* Result count on the left, where the data comes from on the right. */
+.results-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 24px;
+}
+
+.source {
+  font-size: var(--fs-body);
+  color: var(--muted);
+}

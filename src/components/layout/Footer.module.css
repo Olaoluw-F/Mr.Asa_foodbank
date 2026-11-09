@@ -1,0 +1,88 @@
+.site-foot {
+  background: var(--foot);
+  color: var(--foot-fg);
+}
+
+.site-foot .inner {
+  padding-block: 64px 32px;
+  display: grid;
+  gap: 48px;
+}
+
+.foot-cols {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.foot-cols h4 {
+  margin: 0 0 14px;
+  font: 600 var(--fs-caption) var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--foot-muted);
+}
+
+.foot-cols ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.foot-cols a {
+  color: var(--foot-fg);
+  text-decoration: none;
+  font-size: var(--fs-body);
+}
+
+.foot-cols a:hover {
+  text-decoration: underline;
+}
+
+.foot-cols p {
+  color: var(--foot-muted);
+  font-size: var(--fs-body);
+  max-width: 36ch;
+  margin-top: 12px;
+}
+
+.foot-brand {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: var(--fs-sub);
+  letter-spacing: -0.02em;
+}
+
+/* Bottom row: the disclaimer on the left, the copyright on the right. */
+.foot-bottom {
+  border-top: 1px solid var(--foot-line);
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px 40px;
+  font-size: var(--fs-caption);
+  color: var(--foot-muted);
+}
+
+.foot-legal {
+  max-width: 80ch;
+}
+
+.copyright {
+  white-space: nowrap;
+  color: var(--foot-fg);
+}
+
+@media (max-width: 760px) {
+  .foot-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .foot-cols > div:first-child {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,42 @@
+.flag {
+  display: inline-block;
+  flex: none;
+  width: 30px;
+  height: 20px;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.flag.bf {
+  background: linear-gradient(#ef2b2d 50%, #009e49 50%);
+  position: relative;
+}
+
+.flag.bf::after {
+  content: "★";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fcd116;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.flag.ng {
+  background: linear-gradient(
+    90deg,
+    #008751 33.3%,
+    #fff 33.3% 66.6%,
+    #008751 66.6%
+  );
+}
+
+.flag.small {
+  width: 15px;
+  height: 10px;
+  box-shadow: none;
+}
+
+.flag.small.bf::after {
+  font-size: 6px;
+}

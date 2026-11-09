@@ -1,0 +1,181 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+      1000px 560px at 88% 0%,
+      var(--wash-1),
+      transparent 65%
+    ),
+    radial-gradient(800px 480px at -5% 105%, var(--wash-2), transparent 65%),
+    var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Faint grid that fades out toward the edges. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 60% 70% at 75% 45%,
+    #000,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 60% 70% at 75% 45%,
+    #000,
+    transparent 75%
+  );
+  opacity: 0.7;
+}
+
+.hero .inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(40px, 6vw, 80px);
+  padding-block: clamp(56px, 8vw, 112px);
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: var(--fs-hero);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-block: 18px 22px;
+}
+
+.hero .lede {
+  font-size: var(--fs-body);
+  color: var(--muted);
+  max-width: 50ch;
+}
+
+.finder-bar {
+  margin-top: 32px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  background: var(--surface);
+  padding: 6px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  max-width: 560px;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.2s;
+}
+
+.finder-bar input {
+  flex: 1 1 200px;
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  font: inherit;
+  color: var(--ink);
+  padding: 10px 12px;
+}
+
+.finder-bar input:focus {
+  outline: none;
+}
+
+.finder-bar:focus-within {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 3px var(--accent-soft),
+    var(--shadow);
+}
+
+.finder-bar .search-icon {
+  color: var(--muted);
+  margin: 11px 0 0 10px;
+}
+
+.hero .sub-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px 22px;
+  flex-wrap: wrap;
+  font-size: var(--fs-body);
+  color: var(--muted);
+}
+
+.hero .sub-links a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration-color: var(--line-strong);
+}
+
+.hero .sub-links a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Right column: the glass "Open today" card floating over two spheres. */
+.stage {
+  position: relative;
+  isolation: isolate;
+  padding-block: 24px;
+}
+
+.orb {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orb-a {
+  width: min(320px, 70vw);
+  aspect-ratio: 1;
+  right: -56px;
+  top: -40px;
+  background: radial-gradient(
+    circle at 32% 28%,
+    #dbeafe 0%,
+    #60a5fa 20%,
+    #2563eb 52%,
+    #1e3a8a 100%
+  );
+  box-shadow:
+    inset -26px -32px 64px rgba(15, 23, 42, 0.38),
+    0 50px 90px -30px rgba(37, 99, 235, 0.6);
+}
+
+.orb-b {
+  width: min(150px, 34vw);
+  aspect-ratio: 1;
+  left: -48px;
+  bottom: -24px;
+  background: radial-gradient(
+    circle at 34% 30%,
+    #eef2ff 0%,
+    #a5b4fc 28%,
+    #6366f1 66%,
+    #312e81 100%
+  );
+  box-shadow:
+    inset -12px -16px 32px rgba(15, 23, 42, 0.32),
+    0 30px 60px -24px rgba(99, 102, 241, 0.55);
+}
+
+@media (max-width: 860px) {
+  .hero .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .orb-a {
+    right: -24px;
+  }
+
+  .orb-b {
+    left: -16px;
+  }
+}

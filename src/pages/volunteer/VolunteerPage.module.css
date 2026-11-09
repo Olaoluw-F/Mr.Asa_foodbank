@@ -1,0 +1,114 @@
+/* Three joined steps; the 1px gap shows the line color as dividers. */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  counter-reset: s;
+}
+
+.step {
+  padding: 28px;
+  background: var(--surface);
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.step::before {
+  counter-increment: s;
+  content: "0" counter(s);
+  font: 600 var(--fs-caption) var(--body);
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.step p {
+  color: var(--muted);
+  font-size: var(--fs-body);
+}
+
+@media (max-width: 760px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sample-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: var(--warn-soft);
+  border-left: 3px solid var(--warn);
+  font-size: var(--fs-body);
+}
+
+.sample-note b {
+  white-space: nowrap;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 720px;
+  font-size: var(--fs-body);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.table th {
+  font: 600 var(--fs-caption) var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-2);
+}
+
+.table tbody tr {
+  transition: background-color 0.15s;
+}
+
+.table tbody tr:hover {
+  background: color-mix(in srgb, var(--accent-soft) 60%, transparent);
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Same look as the shared EmptyState box, as a table cell. */
+.table .empty-cell {
+  color: var(--muted);
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px dashed var(--line-strong);
+}
+
+.org {
+  font-weight: 600;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: var(--fs-body);
+}
+
+.nowrap {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}

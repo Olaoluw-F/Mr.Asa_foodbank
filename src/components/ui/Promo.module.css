@@ -1,0 +1,47 @@
+.promo {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 4vw, 48px);
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  border: 1px solid var(--line);
+}
+
+.promo h2 {
+  font-size: var(--fs-sub);
+  max-width: 20ch;
+}
+
+.promo p {
+  max-width: 46ch;
+}
+
+.promo > a {
+  justify-self: start;
+  margin-top: 8px;
+}
+
+/* soft: white fading into pale blue. deep: dark slate with a blue glow. */
+.soft {
+  background: linear-gradient(135deg, var(--surface) 30%, var(--accent-soft));
+}
+
+.soft p {
+  color: var(--muted);
+}
+
+.deep {
+  background: radial-gradient(
+      520px 300px at 100% 0%,
+      rgba(37, 99, 235, 0.5),
+      transparent 70%
+    ),
+    var(--deep);
+  color: var(--deep-fg);
+  border-color: transparent;
+}
+
+.deep p {
+  color: var(--deep-muted);
+}
